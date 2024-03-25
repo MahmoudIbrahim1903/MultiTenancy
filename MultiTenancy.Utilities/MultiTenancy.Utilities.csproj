@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MultiTenancy.Common\MultiTenancy.Common.csproj" />
+    <ProjectReference Include="..\MultiTenancy.Services\MultiTenancy.Services.csproj" />
   </ItemGroup>
 
 </Project>

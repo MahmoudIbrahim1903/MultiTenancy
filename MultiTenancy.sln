@@ -7,9 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiTenancy", "MultiTenanc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiTenancy.Common", "MultiTenancy.Common\MultiTenancy.Common.csproj", "{584B6387-1D96-44D7-AAD5-8E6E467F5207}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiTenancy.Utilities", "MultiTenancy.Utilities\MultiTenancy.Utilities.csproj", "{371AEDDA-4CAE-4C0E-9EF5-7CF1B8F847B3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiTenancy.Services", "MultiTenancy.Services\MultiTenancy.Services.csproj", "{0632385D-BF4A-4A87-BA05-9F52EAEAA597}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiTenancy.Services", "MultiTenancy.Services\MultiTenancy.Services.csproj", "{0632385D-BF4A-4A87-BA05-9F52EAEAA597}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +23,6 @@ Global
 		{584B6387-1D96-44D7-AAD5-8E6E467F5207}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{584B6387-1D96-44D7-AAD5-8E6E467F5207}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{584B6387-1D96-44D7-AAD5-8E6E467F5207}.Release|Any CPU.Build.0 = Release|Any CPU
-		{371AEDDA-4CAE-4C0E-9EF5-7CF1B8F847B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{371AEDDA-4CAE-4C0E-9EF5-7CF1B8F847B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{371AEDDA-4CAE-4C0E-9EF5-7CF1B8F847B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{371AEDDA-4CAE-4C0E-9EF5-7CF1B8F847B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0632385D-BF4A-4A87-BA05-9F52EAEAA597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0632385D-BF4A-4A87-BA05-9F52EAEAA597}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0632385D-BF4A-4A87-BA05-9F52EAEAA597}.Release|Any CPU.ActiveCfg = Release|Any CPU

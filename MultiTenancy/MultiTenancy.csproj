@@ -8,13 +8,9 @@
 
   <ItemGroup>
     <Compile Remove="Contract\**" />
-    <Compile Remove="Controllers\**" />
     <Content Remove="Contract\**" />
-    <Content Remove="Controllers\**" />
     <EmbeddedResource Remove="Contract\**" />
-    <EmbeddedResource Remove="Controllers\**" />
     <None Remove="Contract\**" />
-    <None Remove="Controllers\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,7 +24,6 @@
   <ItemGroup>
     <ProjectReference Include="..\MultiTenancy.Common\MultiTenancy.Common.csproj" />
     <ProjectReference Include="..\MultiTenancy.Services\MultiTenancy.Services.csproj" />
-    <ProjectReference Include="..\MultiTenancy.Utilities\MultiTenancy.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

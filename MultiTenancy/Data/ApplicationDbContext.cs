@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MultiTenancy.Contracts;
 using MultiTenancy.Services;
 
 namespace MultiTenancy.Data
@@ -10,7 +11,7 @@ namespace MultiTenancy.Data
         public ApplicationDbContext(DbContextOptions options, ITenantService tenantService) : base(options)
         {
             _tenantService = tenantService;
-            TenantId = tenantService.GetCurrentTenant().TenantId;
+            TenantId = tenantService.GetCurrentTenant()?.TenantId;
         }
 
         public DbSet<Product> Products { get; set; }
@@ -32,13 +33,13 @@ namespace MultiTenancy.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<BaseEntity>().HasQueryFilter(e => e.TenantId == TenantId);
+            modelBuilder.Entity<Product>().HasQueryFilter(e => e.TenantId == TenantId);
             base.OnModelCreating(modelBuilder);
         }
 
         public override int SaveChanges()
         {
-            foreach (var entry in ChangeTracker.Entries<BaseEntity>().Where(e => e.State == EntityState.Added))
+            foreach (var entry in ChangeTracker.Entries<IMustHaveTenant>().Where(e => e.State == EntityState.Added))
             {
                 entry.Entity.TenantId = TenantId;
             }
@@ -47,7 +48,7 @@ namespace MultiTenancy.Data
 
         public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)
         {
-            foreach (var entry in ChangeTracker.Entries<BaseEntity>().Where(e => e.State == EntityState.Added))
+            foreach (var entry in ChangeTracker.Entries<IMustHaveTenant>().Where(e => e.State == EntityState.Added))
             {
                 entry.Entity.TenantId = TenantId;
             }
